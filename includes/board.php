@@ -18,6 +18,22 @@ class FlowBoard_Board{
         return $zones;
     }
 
+    static function get_zindex_top($id){
+        $result = 0;
+        $posts = FlowBoard_Board::all_notes($id);
+        foreach($posts as $post){
+            list($left, $top, $zindex) = explode('x', $post->xyz);
+            if ($result<$zindex) $result = $zindex;
+        }
+        return $result;
+    }
+
+    static function all_notes($id){
+        $args = array('post_type'=>'flowboard_note','numberposts'=>-1,'meta_key'=>flowboard_metakey(),'meta_value'=>$id);
+        $posts = get_posts($args);
+        return $posts;
+    }
+
 
 }
 

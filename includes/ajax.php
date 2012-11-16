@@ -134,14 +134,13 @@ class FlowBoard_Ajax{
             $dataArr['id'] = $id;
 
             //If new check if other in the same place and increase pos and zindex!
-            $args = array('post_type'=>'flowboard_note','numberposts'=>-1,'meta_key'=>flowboard_metakey(),'meta_value'=>$board);
-            $posts = get_posts($args);
+            $posts = FlowBoard_Board::all_notes($board);
 
             $xyz = "42x72x1";
             $xyz = $this->reverse_pos($xyz, $posts);
 
             //Default status:
-            $dataArr->status = $this->board_default_status($board);
+            $dataArr['status'] = $this->board_default_status($board);
 
             $dataArr['xyz'] = $xyz;
             add_post_meta($id, flowboard_metadata(), json_encode($dataArr), true);
@@ -175,6 +174,7 @@ class FlowBoard_Ajax{
                 $top += 4;
                 $zindex = $z + 1;
             }
+            if ($z>$zindex) $zindex = $z+1;
         }
         $result = $left . 'x' . $top . 'x' . $zindex;
 
