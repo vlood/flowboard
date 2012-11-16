@@ -186,7 +186,7 @@ a.add_new_note {
 
 .pr-status{
     width:300px;
-    height: 10px;
+    height: auto;
 }
 
 .pr-author{
