@@ -47,7 +47,7 @@ Please post ideas at the plugin site http://plugins.flowcom.se/flowboard
 
 == Changelog ==
 = 1.5.2 =
-* Prepared for post content
+* Post content editable in popup (no html)
 * Some removal of fonts in css
 
 = 1.5.1 =

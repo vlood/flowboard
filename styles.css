@@ -193,6 +193,10 @@ a.add_new_note {
     width:300px;
 }
 
+.pr-postcontent{
+    width:300px;
+}
+
 .note-form input[type=text]{	height:auto; }
 
 .color{

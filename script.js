@@ -35,7 +35,7 @@ jQuery(document).ready(function(){
     jQuery('.note').click(function(event){
 
         var note_id=jQuery(this).find('span.data').html();
-        tb_show('Edit note',FlowBoardAjax.ajaxurl+'?action=flowboard_note_form&height=650&width=600&id='+note_id);
+        tb_show('Edit note',FlowBoardAjax.ajaxurl+'?action=flowboard_note_form&height=550&width=600&id='+note_id);
 
     });
 
@@ -91,7 +91,7 @@ jQuery(document).ready(function(){
             'estimate'      : jQuery('#noteData .pr-estimate').val(),
             'status'        : jQuery('#noteData .pr-status').val(),
             'timeleft'      : jQuery('#noteData .pr-timeleft').val(),
-            'postcontent'   : tinymce.get('postcontent').getContent()
+            'postcontent'   : jQuery('#noteData .pr-postcontent').val()
         };
 
         jQuery.ajaxSetup({async: false});

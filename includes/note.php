@@ -142,6 +142,9 @@ class FlowBoard_Note{
                 <div class="color orange"></div>
                 <div class="color pink"></div>
                 <input type="hidden" class="pr-board" name="board" id="note-board" value="'.$this->board.'" />
+                <br/><br/>
+                <label>Text</label> <!-- Clicking one of the divs changes the color of the preview -->
+                <textarea class="pr-postcontent" name="note-postcontent" id="note-postcontent">' . $this->postcontent . '</textarea>
                 <div class="clear"></div>
                 <button id="note-submit" class="dialog_button button-primary">Save</button>';
 
@@ -155,26 +158,6 @@ class FlowBoard_Note{
                 <!--span class="note-import-block">Import post with id: <input name="note-import-id" id="note-import-id" class="numbersOnly" /><button id="note-import-enter" class="button-secondary dialog_button">OK</button></span-->
             </form>
             </div>';
-
-        ob_start();
-        wp_editor( $this->postcontent, 'postcontent', array(
-            'media_buttons' => false,
-            'wpautop' => false,
-            'teeny' => false,
-            'textarea_rows' => '8',
-            'tinymce' => array( 'plugins' => 'wordpress, wplink, wpdialogs' )
-        ) );
-        ?>
-        <script language="javascript">
-            jQuery(document).ready(function(){
-                tinymce.execCommand('mceRemoveControl',true,'postcontent');
-                tinymce.execCommand('mceAddControl',false,'postcontent');
-                //tinymce.get('postcontent').setContent('<?php echo $this->postcontent; ?>');
-            });
-        </script>
-        <?php
-        $str .= ob_get_clean();
-
 
         return $str;
 
