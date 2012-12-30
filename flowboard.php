@@ -3,7 +3,7 @@
 Plugin Name: FlowBoard
 Plugin URI: http://plugins.flowcom.se/flowboard
 Description: Web development tool, agile whiteboard with sticky notes. Your notes are posts in WP!
-Version: 1.5.2
+Version: 1.5.3
 Author: Flowcom AB, Andreas Ek
 Author URI: http://www.flowcom.se
 License: GPLv2
