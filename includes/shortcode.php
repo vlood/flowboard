@@ -59,7 +59,7 @@ class FlowBoard_Shortcode {
         $board .= '<div id="flowboardmain_'.$id.'" class="flowboardmain">';
 
         if (current_user_can('edit_posts') || $override){
-            $board = $board.'<a href="'.admin_url('admin-ajax.php').'?action=flowboard_note_form&id=0&board='.$id.'" class="thickbox" title="Add new note">';
+            $board = $board.'<a href="'.admin_url('admin-ajax.php').'?action=flowboard_note_form&id=0&height=550&width=600&board='.$id.'" class="thickbox" title="Add new note">';
             $board .= '<img src="'.WP_PLUGIN_URL.'/flowboard/img/button.png" alt="add new note" />';
             $board .= '</a><br/>';
         }

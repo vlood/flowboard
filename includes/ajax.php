@@ -124,7 +124,7 @@ class FlowBoard_Ajax{
                 'post_title' => $body,
                 'post_content' => $postcontent,
                 'post_status' => 'publish',
-                'post_date' => date('Y-m-d H:i:s'),
+                'post_date' => current_time('mysql'),
                 'post_author' => $user_ID,
                 'post_type' => 'flowboard_note',
                 'post_category' => array(0)
