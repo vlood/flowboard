@@ -10,15 +10,6 @@ class FlowBoard_Main{
         add_action('admin_menu', array(&$this, 'remove_submenus'));
         add_action( 'save_post', array( &$this, 'save_post' ) );
         add_action( 'admin_enqueue_scripts', array( &$this, 'admin_enqueue_scripts' ) );
-        add_action( 'wp_footer', array( &$this, 'wp_footer' ) );
-
-    }
-
-    function wp_footer(){
-
-        echo '<!--';
-        wp_editor( '', 'editorforinitialization' );
-        echo '-->';
 
     }
 
