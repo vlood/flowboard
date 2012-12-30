@@ -31,7 +31,7 @@ jQuery(document).ready(function(){
 
     /* A helper function for converting a set of elements to draggables: */
 	make_draggable(jQuery('.note'));
-    jQuery(".note").draggable();
+    jQuery(".note").touchable();
 
     jQuery('.note').click(function(event){
 
@@ -140,6 +140,7 @@ var zIndex = 0;
 
 function make_draggable(elements)
 {
+
     /* Elements is a jquery object: */
     elements.draggable({
         containment:'parent',
@@ -150,7 +151,7 @@ function make_draggable(elements)
 
 }
 
-jQuery.fn.draggable = function() {
+jQuery.fn.touchable = function() {
     var offset = null;
     var start = function(e) {
         var orig = e.originalEvent;
