@@ -30,7 +30,9 @@ class FlowBoard_Shortcode {
         $meta = json_decode($meta[0]);
 
         if (current_user_can('edit_posts') || $override){
+
             wp_enqueue_script('jquery');
+            wp_admin_css('thickbox');
             wp_enqueue_script('jquery-ui-draggable');
             wp_enqueue_script('jquery-ui-droppable');
             add_thickbox();

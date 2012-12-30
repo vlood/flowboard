@@ -14,6 +14,7 @@ class FlowBoard_Note{
     public $top;
     public $zindex;
     public $status;
+    public $postcontent;
 
     /**
      * @param $id
@@ -33,6 +34,7 @@ class FlowBoard_Note{
             $this->timeleft = $dataArr->timeleft;
             $this->estimate = $dataArr->estimate;
             $this->status = $dataArr->status;
+            $this->postcontent = $post->post_content;
             list($this->left,$this->top,$this->zindex) = explode('x', $dataArr->xyz);
             $this->board = $dataArr->board;
         }
@@ -45,6 +47,7 @@ class FlowBoard_Note{
             $this->timeleft = "0";
             $this->estimate = "0";
             $this->status = "";
+            $this->postcontent = '';
             $this->board = 0;
         }
     }
@@ -152,6 +155,26 @@ class FlowBoard_Note{
                 <!--span class="note-import-block">Import post with id: <input name="note-import-id" id="note-import-id" class="numbersOnly" /><button id="note-import-enter" class="button-secondary dialog_button">OK</button></span-->
             </form>
             </div>';
+
+        ob_start();
+        wp_editor( $this->postcontent, 'postcontent', array(
+            'media_buttons' => false,
+            'wpautop' => false,
+            'teeny' => false,
+            'textarea_rows' => '8',
+            'tinymce' => array( 'plugins' => 'wordpress, wplink, wpdialogs' )
+        ) );
+        ?>
+        <script language="javascript">
+            jQuery(document).ready(function(){
+                tinymce.execCommand('mceRemoveControl',true,'postcontent');
+                tinymce.execCommand('mceAddControl',false,'postcontent');
+                //tinymce.get('postcontent').setContent('<?php echo $this->postcontent; ?>');
+            });
+        </script>
+        <?php
+        $str .= ob_get_clean();
+
 
         return $str;
 

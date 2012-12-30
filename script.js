@@ -27,7 +27,7 @@ jQuery(document).ready(function(){
 		/* Finding the biggest z-index value of the notes */
 		tmp = jQuery(this).css('z-index');
 		if(tmp>zIndex) zIndex = tmp;
-	})
+	});
 
     /* A helper function for converting a set of elements to draggables: */
 	make_draggable(jQuery('.note'));
@@ -35,7 +35,7 @@ jQuery(document).ready(function(){
     jQuery('.note').click(function(event){
 
         var note_id=jQuery(this).find('span.data').html();
-        tb_show('Edit note',FlowBoardAjax.ajaxurl+'?action=flowboard_note_form&id='+note_id);
+        tb_show('Edit note',FlowBoardAjax.ajaxurl+'?action=flowboard_note_form&height=650&width=600&id='+note_id);
 
     });
 
@@ -81,17 +81,18 @@ jQuery(document).ready(function(){
         var _id = jQuery('.previewNote span.data').first().text();
 
 		var data = {
-			action : 'flowboard_insert_note',
-			'zindex'	: ++zIndex,
-			'body'		: jQuery('#noteData .pr-body').val(),
-			'author'	: jQuery('#noteData .pr-author').val(),
-            'board'     : jQuery('#noteData .pr-board').val(),
-            'id'        : _id,
-			'color'		: jQuery('.previewNote span.color').first().text(),
-            'estimate'  : jQuery('#noteData .pr-estimate').val(),
-            'status'    : jQuery('#noteData .pr-status').val(),
-            'timeleft'  : jQuery('#noteData .pr-timeleft').val()
-		};
+			action          : 'flowboard_insert_note',
+			'zindex'	    : ++zIndex,
+			'body'		    : jQuery('#noteData .pr-body').val(),
+			'author'	    : jQuery('#noteData .pr-author').val(),
+            'board'         : jQuery('#noteData .pr-board').val(),
+            'id'            : _id,
+			'color'		    : jQuery('.previewNote span.color').first().text(),
+            'estimate'      : jQuery('#noteData .pr-estimate').val(),
+            'status'        : jQuery('#noteData .pr-status').val(),
+            'timeleft'      : jQuery('#noteData .pr-timeleft').val(),
+            'postcontent'   : tinymce.get('postcontent').getContent()
+        };
 
         jQuery.ajaxSetup({async: false});
 
@@ -129,9 +130,9 @@ jQuery(document).ready(function(){
 		e.preventDefault();
         tb_remove();
 
-	})
+	});
 
-	jQuery('.note-form').live('submit',function(e){e.preventDefault();});
+    jQuery('.note-form').live('submit',function(e){e.preventDefault();});
 });
 
 var zIndex = 0;

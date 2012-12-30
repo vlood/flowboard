@@ -46,6 +46,10 @@ Please post ideas at the plugin site http://plugins.flowcom.se/flowboard
 2. Edit your note with simple text OR go to the post for more information.
 
 == Changelog ==
+= 1.5.2 =
+* Prepared for post content
+* Some removal of fonts in css
+
 = 1.5.1 =
 * New note didn't show until refresh, fixed.
 * New note on top, fixed.

@@ -64,15 +64,16 @@ class FlowBoard_Ajax{
         }*/
 
         // Escaping the input data:
-        $author = esc_attr($_POST['author']);
-        $body = esc_html($_POST['body']);
-        $color = esc_attr($_POST['color']);
-        $id = (int)esc_attr($_POST['id']);
-        $pos = (int)esc_attr($_POST['pos']);
-        $zindex = (int)esc_attr($_POST['zindex']);
-        $board = (int)esc_attr($_POST['board']);
-        $estimate = (int)esc_attr($_POST['estimate']);
-        $timeleft = (int)esc_attr($_POST['timeleft']);
+        $author         = esc_attr($_POST['author']);
+        $body           = esc_html($_POST['body']);
+        $color          = esc_attr($_POST['color']);
+        $id             = (int)esc_attr($_POST['id']);
+        $pos            = (int)esc_attr($_POST['pos']);
+        $zindex         = (int)esc_attr($_POST['zindex']);
+        $board          = (int)esc_attr($_POST['board']);
+        $estimate       = (int)esc_attr($_POST['estimate']);
+        $timeleft       = (int)esc_attr($_POST['timeleft']);
+        $postcontent    = wp_kses_post($_POST['postcontent']);
 
         $dataArr = array('id'=>0,'author'=>$author,'color'=>$color,'zindex'=>$zindex,'estimate'=>$estimate,'timeleft'=>$timeleft,'xyz'=>$pos);
 
@@ -87,6 +88,7 @@ class FlowBoard_Ajax{
             if ($body!="###imported item###")
             {
                 $my_post['post_title'] = $body;
+                $my_post['post_content'] = $postcontent;
             }
 
             // Update the post into the database
@@ -120,7 +122,7 @@ class FlowBoard_Ajax{
             global $user_ID;
             $new_post = array(
                 'post_title' => $body,
-                'post_content' => '',
+                'post_content' => $postcontent,
                 'post_status' => 'publish',
                 'post_date' => date('Y-m-d H:i:s'),
                 'post_author' => $user_ID,
