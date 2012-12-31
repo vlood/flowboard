@@ -29,18 +29,24 @@ class FlowBoard_Shortcode {
         $meta = get_post_meta($id, flowboard_metadata());
         $meta = json_decode($meta[0]);
 
-        if (current_user_can('edit_posts') || $override){
+        if ( current_user_can( 'edit_posts' ) || $override ){
 
             wp_enqueue_script('jquery');
             wp_admin_css('thickbox');
             wp_enqueue_script('jquery-ui-draggable');
             wp_enqueue_script('jquery-ui-droppable');
             add_thickbox();
-            $myScriptUrl = WP_PLUGIN_URL . '/flowboard/script.js';
+
+            $myScriptUrl = WP_PLUGIN_URL . '/flowboard/js/script.js';
             wp_deregister_script( 'flowboardjs' );
             wp_register_script( 'flowboardjs', $myScriptUrl);
             wp_enqueue_script( 'flowboardjs' );
             wp_localize_script( 'flowboardjs', 'FlowBoardAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+
+            $myScriptUrl = WP_PLUGIN_URL . '/flowboard/js/jquery.ui.touch-punch.min.js';
+            wp_deregister_script( 'touch-punch' );
+            wp_register_script( 'touch-punch', $myScriptUrl );
+            wp_enqueue_script( 'touch-punch' );
         }
 
         $board = "<!--FlowBoard-->";

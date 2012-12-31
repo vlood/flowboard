@@ -140,11 +140,6 @@ var zIndex = 0;
 function make_draggable(elements)
 {
     /* Elements is a jquery object: */
-    elements.touchable({
-        containment:'parent'
-    });
-
-    /* Elements is a jquery object: */
     elements.draggable({
         containment:'parent',
         start:function(e,ui){ ui.helper.css('z-index',++zIndex); },
@@ -153,26 +148,3 @@ function make_draggable(elements)
     });
 
 }
-
-jQuery.fn.touchable = function() {
-    var offset = null;
-    var start = function(e) {
-        var orig = e.originalEvent;
-        var pos = jQuery(this).position();
-        offset = {
-            x: orig.changedTouches[0].pageX - pos.left,
-            y: orig.changedTouches[0].pageY - pos.top
-        };
-    };
-    var moveMe = function(e) {
-        e.preventDefault();
-        var orig = e.originalEvent;
-        jQuery(this).css({
-            top: orig.changedTouches[0].pageY - offset.y,
-            left: orig.changedTouches[0].pageX - offset.x
-        });
-    };
-    this.bind("touchstart", start);
-    this.bind("touchmove", moveMe);
-};
-

@@ -48,7 +48,7 @@ Please post ideas at the plugin site http://plugins.flowcom.se/flowboard
 == Changelog ==
 
 = 1.5.3 =
-* Touch support for ipad/iphone
+* Touch-Pounch added, support for ipad/iphone
 
 = 1.5.2 =
 * Post date fixed thanks to "innerbot".
