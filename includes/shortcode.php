@@ -65,8 +65,8 @@ class FlowBoard_Shortcode {
         $board .= '<div id="flowboardmain_'.$id.'" class="flowboardmain">';
 
         if (current_user_can('edit_posts') || $override){
-            $board = $board.'<a href="'.admin_url('admin-ajax.php').'?action=flowboard_note_form&id=0&height=550&width=600&board='.$id.'" class="thickbox" title="Add new note">';
-            $board .= '<img src="'.WP_PLUGIN_URL.'/flowboard/img/button.png" alt="add new note" />';
+            $board = $board.'<a href="'.admin_url('admin-ajax.php').'?action=flowboard_note_form&id=0&height=550&width=600&board='.$id.'" class="thickbox" title="'.__('Add new note', 'flowboard').'">';
+            $board .= '<img src="'.WP_PLUGIN_URL.'/flowboard/img/button.png" alt="'.__('add new note', 'flowboard').'" />';
             $board .= '</a><br/>';
         }
 
@@ -94,7 +94,7 @@ class FlowBoard_Shortcode {
         if ( $post_type == 'flowboard_note' ) return $context;
 
         $image_btn = WP_PLUGIN_URL . '/flowboard/img/button.png';
-        $out       = '<a href="#TB_inline?width=250&height=400&inlineId=popup_flowboard" class="thickbox" title="' . __( 'Add Flowboard here', 'plumba' ) . '"><img src="' . $image_btn . '" alt="' . __( 'Add FlowBoard here', 'flowboard' ) . '" /></a>';
+        $out       = '<a href="#TB_inline?width=250&height=400&inlineId=popup_flowboard" class="thickbox" title="' . __( 'Add Flowboard here', 'flowboard' ) . '"><img src="' . $image_btn . '" alt="' . __( 'Add FlowBoard here', 'flowboard' ) . '" /></a>';
         return $context . $out;
     }
 

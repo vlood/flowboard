@@ -15,8 +15,8 @@ class FlowBoard_Option{
     ?>
         <div class="wrap">
             <div class="icon32" id="icon-tools"> <br /> </div>
-            <h2>FlowBoard settings</h2>
-            <p>Take control of your FlowBoards, by overriding the default settings with your own specific preferences.</p>
+            <h2><?php _e('FlowBoard settings', 'flowboard'); ?></h2>
+            <p><?php _e('Take control of your FlowBoards, by overriding the default settings with your own specific preferences.', 'flowboard'); ?></p>
             <?php
 
             $options = get_option('flowboard_plugin_options');
@@ -47,7 +47,7 @@ class FlowBoard_Option{
                             /*$options = get_option('flowboard_plugin_options');
                             $plugin_options[$keys[$i]] = $options[$logo];*/
                             // Die and let the user know that they made a mistake.
-                            wp_die('No image was uploaded.');
+                            wp_die(__('No image was uploaded.', 'flowboard'));
                         }
                     }
                     // Else, the user didn't upload a file.
@@ -62,7 +62,10 @@ class FlowBoard_Option{
                 ?>
                 <div style="background:#ECECEC;border:1px solid #CCC;padding:0 10px;margin-top:5px;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;">
                     <p>
-                        FlowBoard settings saved <?php echo date('Y-m-d H:i:s'); ?>.
+                        <?php 
+                            _e('FlowBoard settings saved', 'flowboard');
+                            echo date('Y-m-d H:i:s');
+                        ?>.
                     </p>
                 </div>
                 <?php
@@ -72,7 +75,7 @@ class FlowBoard_Option{
             ?>
             <form method="post" action="#" enctype="multipart/form-data">
 
-                <p>Background:<br/>
+                <p><?php _e('Background', 'flowboard'); ?>:<br/>
                 <?php
 
                 if ($options['board_background']!=NULL) {
@@ -83,7 +86,7 @@ class FlowBoard_Option{
                 ?>
 
                 <p class="submit">
-                    <input name="save" type="submit" class="button-primary" value="<?php esc_attr_e('Save'); ?>" />
+                    <input name="save" type="submit" class="button-primary" value="<?php esc_attr_e(__('Save', 'flowboard')); ?>" />
                 </p>
             </form>
         </div>
@@ -107,7 +110,7 @@ class FlowBoard_Option{
                     /*$options = get_option('flowboard_plugin_options');
                     $plugin_options[$keys[$i]] = $options[$logo];*/
                     // Die and let the user know that they made a mistake.
-                    wp_die('No image was uploaded.');
+                    wp_die(__('No image was uploaded.', 'flowboard'));
                 }
             }
             // Else, the user didn't upload a file.

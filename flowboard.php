@@ -29,6 +29,6 @@ function flowboard_metadata() {
     return '_flowboard_meta';
 }
 
-
+load_plugin_textdomain('flowboard', false, basename( dirname( __FILE__ ) ) . '/languages' );
 
 ?>

@@ -51,7 +51,7 @@ class FlowBoard_Ajax{
         // Checking whether all input variables are in place:
         if(!is_numeric($_POST['zindex']) || !isset($_POST['author']) || !isset($_POST['body']) || !in_array($_POST['color'],array('yellow','green','blue','purple','orange','pink')))
         {
-            echo 'Not valid input to save note!';
+            _e('Not valid input to save note!', 'flowboard');
             die(0);
         }
 
@@ -115,7 +115,7 @@ class FlowBoard_Ajax{
         else
         {
             if (!$board) {
-                echo 'Unknown board ID';
+                _e('Unknown board ID', 'flowboard');
                 die(0);
             }
 
@@ -244,7 +244,5 @@ class FlowBoard_Ajax{
     }
 
 }
-
-
 
 ?>

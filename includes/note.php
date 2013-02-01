@@ -106,22 +106,22 @@ class FlowBoard_Note{
         $str = '<div id="noteData"> <!-- Holds the form -->
             <form action="" method="post" class="note-form">
                 <br/>
-                <label for="note-body">Headline</label>
+                <label for="note-body">'.__('Headline', 'flowboard').'</label>
                 <textarea name="note-body" id="note-body" class="pr-body" cols="30" rows="6">'.$this->body.'</textarea>
                 <table cellspacing="0" cellpadding="0">
                     <tr>
                         <td>
-                            <label for="note-name">Time left</label>
+                            <label for="note-name">'.__('Time left', 'flowboard').'</label>
                             <input type="text" name="note-timeleft" id="note-timeleft" class="pr-timeleft numbersOnly" value="'.$this->timeleft.'" />
                         </td>
                         <td style="width:40px;">&nbsp;</td>
                         <td>
-                            <label for="note-estimate">Estimate</label>
+                            <label for="note-estimate">'.__('Estimate', 'flowboard').'</label>
                             <input type="text" name="note-estimate" id="note-estimate" class="pr-estimate numbersOnly" value="'.$this->estimate.'" />
                         </td>
                     </tr>
                 </table>
-                <label for="note-status">Status</label>
+                <label for="note-status">'.__('Status', 'flowboard').'</label>
                 <select name="note-status" class="pr-status">
                 ';
 
@@ -132,9 +132,9 @@ class FlowBoard_Note{
         }
 
         $str .= '</select><br/><br/>
-                <label for="note-name">Responsible</label>
+                <label for="note-name">'.__('Responsible', 'flowboard').'</label>
                 <input type="text" name="note-name" id="note-name" class="pr-author" value="'.$this->author.'" />
-                <label>Color</label> <!-- Clicking one of the divs changes the color of the preview -->
+                <label>'.__('Color', 'flowboard').'</label> <!-- Clicking one of the divs changes the color of the preview -->
                 <div class="color yellow"></div>
                 <div class="color blue"></div>
                 <div class="color green"></div>
@@ -143,18 +143,18 @@ class FlowBoard_Note{
                 <div class="color pink"></div>
                 <input type="hidden" class="pr-board" name="board" id="note-board" value="'.$this->board.'" />
                 <br/><br/>
-                <label>Text</label> <!-- Clicking one of the divs changes the color of the preview -->
+                <label>'.__('Text', 'flowboard').'</label> <!-- Clicking one of the divs changes the color of the preview -->
                 <textarea class="pr-postcontent" name="note-postcontent" id="note-postcontent">' . $this->postcontent . '</textarea>
                 <div class="clear"></div>
-                <button id="note-submit" class="dialog_button button-primary">Save</button>';
+                <button id="note-submit" class="dialog_button button-primary">'.__('Save', 'flowboard').'</button>';
 
             if ($this->id && is_user_logged_in()){
-                $str .= '<button onclick="document.location=\''.admin_url('post.php?post='.$this->id.'&action=edit').'\';" id="note-post" class="dialog_button">To Post</button>';
+                $str .= '<button onclick="document.location=\''.admin_url('post.php?post='.$this->id.'&action=edit').'\';" id="note-post" class="dialog_button">'.__('To Post', 'flowboard').'</button>';
             }
 
             $str .= '
                 <!--button id="note-import" class="dialog_button">Import</button-->
-                <button id="note-close" onclick="tb_remove();">Cancel</button>
+                <button id="note-close" onclick="tb_remove();">'.__('Cancel', 'flowboard').'</button>
                 <!--span class="note-import-block">Import post with id: <input name="note-import-id" id="note-import-id" class="numbersOnly" /><button id="note-import-enter" class="button-secondary dialog_button">OK</button></span-->
             </form>
             </div>';

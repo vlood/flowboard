@@ -147,38 +147,38 @@ class FlowBoard_Main{
 
     function init() {
 
-        register_post_type('flowboard_note', array(	'label' => 'Notes','description' => 'FlowBoard custom post types','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'exclude_from_search' => false,'supports' => array('title','editor','comments',),'labels' => array (
-            'name' => 'Notes',
-            'singular_name' => 'Note',
-            'menu_name' => 'Notes',
-            'add_new' => 'Add Note',
-            'add_new_item' => 'Add New Note',
-            'edit' => 'Edit',
-            'edit_item' => 'Edit Note',
-            'new_item' => 'New Note',
-            'view' => 'View Note',
-            'view_item' => 'View Note',
-            'search_items' => 'Search Notes',
-            'not_found' => 'No Notes Found',
-            'not_found_in_trash' => 'No Notes Found in Trash',
-            'parent' => 'Parent Note',
+        register_post_type('flowboard_note', array(	'label' => __('Notes', 'flowboard'),'description' => __('FlowBoard custom post types', 'flowboard'),'public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'exclude_from_search' => false,'supports' => array('title','editor','comments',),'labels' => array (
+            'name' => __('Notes', 'flowboard'),
+            'singular_name' => __('Note', 'flowboard'),
+            'menu_name' => __('Notes', 'flowboard'),
+            'add_new' => __('Add Note', 'flowboard'),
+            'add_new_item' => __('Add New Note', 'flowboard'),
+            'edit' => __('Edit', 'flowboard'),
+            'edit_item' => __('Edit Note', 'flowboard'),
+            'new_item' => __('New Note', 'flowboard'),
+            'view' => __('View Note', 'flowboard'),
+            'view_item' => __('View Note', 'flowboard'),
+            'search_items' => __('Search Notes', 'flowboard'),
+            'not_found' => __('No Notes Found', 'flowboard'),
+            'not_found_in_trash' => __('No Notes Found in Trash', 'flowboard'),
+            'parent' => __('Parent Note', 'flowboard'),
         ),) );
 
-        register_post_type('flowboard_board', array(	'label' => 'Boards','description' => '','public' => false,'show_ui' => true,'show_in_menu' => 'edit.php?post_type=flowboard_note','capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'exclude_from_search' => true,'supports' => array('title',),'labels' => array (
-            'name' => 'Boards',
-            'singular_name' => 'Board',
-            'menu_name' => 'Boards',
-            'add_new' => 'Add Board',
-            'add_new_item' => 'Add New Board',
-            'edit' => 'Edit',
-            'edit_item' => 'Edit Board',
-            'new_item' => 'New Board',
-            'view' => 'View Board',
-            'view_item' => 'View Board',
-            'search_items' => 'Search Boards',
-            'not_found' => 'No Boards Found',
-            'not_found_in_trash' => 'No Boards Found in Trash',
-            'parent' => 'Parent Board',
+        register_post_type('flowboard_board', array(	'label' => __('Boards', 'flowboard'),'description' => '','public' => false,'show_ui' => true,'show_in_menu' => 'edit.php?post_type=flowboard_note','capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'exclude_from_search' => true,'supports' => array('title',),'labels' => array (
+            'name' => __('Boards', 'flowboard'),
+            'singular_name' => __('Board', 'flowboard'),
+            'menu_name' => __('Boards', 'flowboard'),
+            'add_new' => __('Add Board', 'flowboard'),
+            'add_new_item' => __('Add New Board', 'flowboard'),
+            'edit' => __('Edit', 'flowboard'),
+            'edit_item' => __('Edit Board', 'flowboard'),
+            'new_item' => __('New Board', 'flowboard'),
+            'view' => __('View Board', 'flowboard'),
+            'view_item' => __('View Board', 'flowboard'),
+            'search_items' => __('Search Boards', 'flowboard'),
+            'not_found' => __('No Boards Found', 'flowboard'),
+            'not_found_in_trash' => __('No Boards Found in Trash', 'flowboard'),
+            'parent' => __('Parent Board', 'flowboard'),
         ),) );
 
         if (!is_admin()) {
