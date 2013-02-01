@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: FlowBoard v1.5.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-02-01 10:58:53+0000\n"
+"PO-Revision-Date: 2013-02-01 13:07:59+0000\n"
 "Last-Translator: vloo <vlood.vassilev@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -237,7 +237,7 @@ msgstr "Запази"
 #: includes/note.php:152
 #@ flowboard
 msgid "To Post"
-msgstr "Към пълните настройки"
+msgstr "Пълни настройки"
 
 #: includes/note.php:157
 #: includes/shortcode.php:131
