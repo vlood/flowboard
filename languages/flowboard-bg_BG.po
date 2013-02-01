@@ -1,0 +1,308 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FlowBoard v1.5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-02-01 10:58:53+0000\n"
+"Last-Translator: vloo <vlood.vassilev@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Bulgarian\n"
+"X-Poedit-Country: BULGARIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: includes/ajax.php:54
+#@ flowboard
+msgid "Not valid input to save note!"
+msgstr "Невалидни данни за запазване на бележката!"
+
+#: includes/ajax.php:118
+#@ flowboard
+msgid "Unknown board ID"
+msgstr "Невалидно id на дъска"
+
+#: includes/main.php:57
+#@ flowboard
+msgid "FlowBoard Zones"
+msgstr "Зони на FlowBoard"
+
+#: includes/main.php:58
+#@ flowboard
+msgid "Flowboard properties"
+msgstr "Настройки на Flowboard"
+
+#: includes/main.php:79
+#: includes/main.php:169
+#@ flowboard
+msgid "Board"
+msgstr "Дъска"
+
+#: includes/main.php:80
+#: includes/shortcode.php:119
+#@ flowboard
+msgid "manage boards here!"
+msgstr "управлявай дъските от тук!"
+
+#: includes/main.php:82
+#@ flowboard
+msgid "--- choose assigned board ---"
+msgstr "--- избери дъска ---"
+
+#: includes/main.php:108
+#@ flowboard
+msgid "Add"
+msgstr "Добави"
+
+#: includes/main.php:110
+#@ flowboard
+msgid "Remove"
+msgstr "Премахни"
+
+#: includes/main.php:112
+#@ flowboard
+msgid "Reset"
+msgstr "Изчисти"
+
+#: includes/main.php:150
+#: includes/main.php:151
+#: includes/main.php:153
+#@ flowboard
+msgid "Notes"
+msgstr "Бележки"
+
+#: includes/main.php:150
+#@ flowboard
+msgid "FlowBoard custom post types"
+msgstr "FlowBoard допълнителни типове"
+
+#: includes/main.php:152
+#@ flowboard
+msgid "Note"
+msgstr "Бележка"
+
+#: includes/main.php:154
+#@ flowboard
+msgid "Add Note"
+msgstr "Добави бележка"
+
+#: includes/main.php:155
+#@ flowboard
+msgid "Add New Note"
+msgstr "Добави нова бележка"
+
+#: includes/main.php:156
+#: includes/main.php:173
+#@ flowboard
+msgid "Edit"
+msgstr "Редактирай"
+
+#: includes/main.php:157
+#@ flowboard
+msgid "Edit Note"
+msgstr "Редактирай бележка"
+
+#: includes/main.php:158
+#@ flowboard
+msgid "New Note"
+msgstr "Нова бележка"
+
+#: includes/main.php:159
+#: includes/main.php:160
+#@ flowboard
+msgid "View Note"
+msgstr "Виж бележката"
+
+#: includes/main.php:161
+#@ flowboard
+msgid "Search Notes"
+msgstr "Търси в бележки"
+
+#: includes/main.php:162
+#@ flowboard
+msgid "No Notes Found"
+msgstr "Не бяха намерени бележки"
+
+#: includes/main.php:163
+#@ flowboard
+msgid "No Notes Found in Trash"
+msgstr "Няма бележки в кошчето"
+
+#: includes/main.php:164
+#@ flowboard
+msgid "Parent Note"
+msgstr "Родителска бележка"
+
+#: includes/main.php:167
+#: includes/main.php:168
+#: includes/main.php:170
+#@ flowboard
+msgid "Boards"
+msgstr "Дъски"
+
+#: includes/main.php:171
+#@ flowboard
+msgid "Add Board"
+msgstr "Добави дъска"
+
+#: includes/main.php:172
+#@ flowboard
+msgid "Add New Board"
+msgstr "Добави нова дъска"
+
+#: includes/main.php:174
+#@ flowboard
+msgid "Edit Board"
+msgstr "Редактирай дъска"
+
+#: includes/main.php:175
+#@ flowboard
+msgid "New Board"
+msgstr "Нова дъска"
+
+#: includes/main.php:176
+#: includes/main.php:177
+#@ flowboard
+msgid "View Board"
+msgstr "Виж дъската"
+
+#: includes/main.php:178
+#@ flowboard
+msgid "Search Boards"
+msgstr "Търси из дъските"
+
+#: includes/main.php:179
+#@ flowboard
+msgid "No Boards Found"
+msgstr "Не бяха намерени дъски"
+
+#: includes/main.php:180
+#@ flowboard
+msgid "No Boards Found in Trash"
+msgstr "Няма дъски в кошчето"
+
+#: includes/main.php:181
+#@ flowboard
+msgid "Parent Board"
+msgstr "Родителска дъска"
+
+#: includes/note.php:109
+#@ flowboard
+msgid "Headline"
+msgstr "Заглавие"
+
+#: includes/note.php:114
+#@ flowboard
+msgid "Time left"
+msgstr "Оставащо време"
+
+#: includes/note.php:119
+#@ flowboard
+msgid "Estimate"
+msgstr "Оценка за време"
+
+#: includes/note.php:124
+#@ flowboard
+msgid "Status"
+msgstr "Статус"
+
+#: includes/note.php:135
+#@ flowboard
+msgid "Responsible"
+msgstr "Отговорник"
+
+#: includes/note.php:137
+#@ flowboard
+msgid "Color"
+msgstr "Цвят"
+
+#: includes/note.php:146
+#@ flowboard
+msgid "Text"
+msgstr "Описание"
+
+#: includes/note.php:149
+#: includes/optionpage.php:89
+#@ flowboard
+msgid "Save"
+msgstr "Запази"
+
+#: includes/note.php:152
+#@ flowboard
+msgid "To Post"
+msgstr "Към пълните настройки"
+
+#: includes/note.php:157
+#: includes/shortcode.php:131
+#@ flowboard
+msgid "Cancel"
+msgstr "Откажи"
+
+#: includes/optionpage.php:18
+#@ flowboard
+msgid "FlowBoard settings"
+msgstr "FlowBoard настройки"
+
+#: includes/optionpage.php:19
+#@ flowboard
+msgid "Take control of your FlowBoards, by overriding the default settings with your own specific preferences."
+msgstr "Управлявай дъските си, чрез замяна на стандартните настройки със специфичните тук."
+
+#: includes/optionpage.php:50
+#: includes/optionpage.php:113
+#@ flowboard
+msgid "No image was uploaded."
+msgstr "Не бе качено изображение."
+
+#: includes/optionpage.php:66
+#@ flowboard
+msgid "FlowBoard settings saved"
+msgstr "Настройките бяха запазени"
+
+#: includes/optionpage.php:78
+#@ flowboard
+msgid "Background"
+msgstr "Фон"
+
+#: includes/shortcode.php:68
+#@ flowboard
+msgid "Add new note"
+msgstr "Добави нова бележка"
+
+#: includes/shortcode.php:69
+#@ flowboard
+msgid "add new note"
+msgstr "добави нова бележка"
+
+#: includes/shortcode.php:97
+#@ flowboard
+msgid "Add Flowboard here"
+msgstr "Добави дъска тук"
+
+#: includes/shortcode.php:97
+#@ flowboard
+msgid "Add FlowBoard here"
+msgstr "Добави дъска тук"
+
+#: includes/shortcode.php:111
+#@ flowboard
+msgid "--- choose board to insert ---"
+msgstr "--- избери дъска за показване ---"
+
+#: includes/shortcode.php:123
+#@ flowboard
+msgid "Make the FlowBoard draggable for unauthorized visitors."
+msgstr "Позволи дъската да е манипулируема за нерегистрирани потребители."
+
+#: includes/shortcode.php:129
+#@ flowboard
+msgid "Insert"
+msgstr "Вмъкни"
+
