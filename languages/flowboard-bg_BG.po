@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: FlowBoard v1.5.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-02-01 13:07:59+0000\n"
+"PO-Revision-Date: 2013-02-02 12:39:55+0000\n"
 "Last-Translator: vloo <vlood.vassilev@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -41,12 +41,13 @@ msgstr "Настройки на Flowboard"
 
 #: includes/main.php:79
 #: includes/main.php:169
+#: includes/shortcode.php:110
 #@ flowboard
 msgid "Board"
 msgstr "Дъска"
 
 #: includes/main.php:80
-#: includes/shortcode.php:119
+#: includes/shortcode.php:165
 #@ flowboard
 msgid "manage boards here!"
 msgstr "управлявай дъските от тук!"
@@ -194,27 +195,34 @@ msgid "Parent Board"
 msgstr "Родителска дъска"
 
 #: includes/note.php:109
+#: includes/shortcode.php:108
 #@ flowboard
 msgid "Headline"
 msgstr "Заглавие"
 
 #: includes/note.php:114
+#: includes/shortcode.php:112
 #@ flowboard
 msgid "Time left"
 msgstr "Оставащо време"
 
 #: includes/note.php:119
+#: includes/shortcode.php:113
 #@ flowboard
 msgid "Estimate"
 msgstr "Оценка за време"
 
 #: includes/note.php:124
+#: includes/shortcode.php:111
 #@ flowboard
 msgid "Status"
 msgstr "Статус"
 
 #: includes/note.php:135
+#: includes/shortcode.php:104
+#: includes/shortcode.php:107
 #@ flowboard
+#@ FlowBoard
 msgid "Responsible"
 msgstr "Отговорник"
 
@@ -224,6 +232,7 @@ msgid "Color"
 msgstr "Цвят"
 
 #: includes/note.php:146
+#: includes/shortcode.php:109
 #@ flowboard
 msgid "Text"
 msgstr "Описание"
@@ -240,7 +249,7 @@ msgid "To Post"
 msgstr "Пълни настройки"
 
 #: includes/note.php:157
-#: includes/shortcode.php:131
+#: includes/shortcode.php:177
 #@ flowboard
 msgid "Cancel"
 msgstr "Откажи"
@@ -271,37 +280,37 @@ msgstr "Настройките бяха запазени"
 msgid "Background"
 msgstr "Фон"
 
-#: includes/shortcode.php:68
+#: includes/shortcode.php:69
 #@ flowboard
 msgid "Add new note"
 msgstr "Добави нова бележка"
 
-#: includes/shortcode.php:69
+#: includes/shortcode.php:70
 #@ flowboard
 msgid "add new note"
 msgstr "добави нова бележка"
 
-#: includes/shortcode.php:97
+#: includes/shortcode.php:143
 #@ flowboard
 msgid "Add Flowboard here"
 msgstr "Добави дъска тук"
 
-#: includes/shortcode.php:97
+#: includes/shortcode.php:143
 #@ flowboard
 msgid "Add FlowBoard here"
 msgstr "Добави дъска тук"
 
-#: includes/shortcode.php:111
+#: includes/shortcode.php:157
 #@ flowboard
 msgid "--- choose board to insert ---"
 msgstr "--- избери дъска за показване ---"
 
-#: includes/shortcode.php:123
+#: includes/shortcode.php:169
 #@ flowboard
 msgid "Make the FlowBoard draggable for unauthorized visitors."
 msgstr "Позволи дъската да е манипулируема за нерегистрирани потребители."
 
-#: includes/shortcode.php:129
+#: includes/shortcode.php:175
 #@ flowboard
 msgid "Insert"
 msgstr "Вмъкни"
