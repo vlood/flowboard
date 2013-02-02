@@ -131,9 +131,29 @@ class FlowBoard_Note{
             $str .= '>'.$zone.'</option>';
         }
 
+        //Users dropdown instead of text field
+        $users  = get_users(array('orderby' => 'display_name', 'order' => 'ASC'));
+
+        $list_items = '<option value="none">none</option>';
+
+        foreach ($users as $cur_user) {
+            if ($this->author == $cur_user->display_name || $this->author == $cur_user->user_login) {
+                $list_items = $list_items.'<option selected value="' . $cur_user->user_login . '">' . $cur_user->display_name . '</option>';
+            } else {
+                $list_items = $list_items.'<option value="' . $cur_user->user_login . '">' . $cur_user->display_name . '</option>';    
+            }
+            
+        }
+
         $str .= '</select><br/><br/>
                 <label for="note-name">'.__('Responsible', 'flowboard').'</label>
-                <input type="text" name="note-name" id="note-name" class="pr-author" value="'.$this->author.'" />
+                
+                <select name="note-name" id="note-name" class="pr-author">
+                    ' . $list_items . '
+                </select>
+
+                <!--input type="text" name="note-name" id="note-name" class="pr-author" value="'.$this->author.'" /-->
+                
                 <label>'.__('Color', 'flowboard').'</label> <!-- Clicking one of the divs changes the color of the preview -->
                 <div class="color yellow"></div>
                 <div class="color blue"></div>
