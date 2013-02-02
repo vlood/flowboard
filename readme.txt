@@ -20,6 +20,16 @@ To see the plugin in action visit the [Development and Demo Site](http://plugins
 
 Every note is saved as a custom post type and editable in wp-admin. The FlowBoard data is stored under the note posts metadata (custom fields).
 
+== FAQ ==
+
+Q: How to add a board to a post, if a script conflict blocks me from pressing the 'add board' button in TinyMCE?
+A: The shortcode, that is used for that is [FlowBoard id=4], where the id is for the board.
+
+Q: How do I get the board id?
+A: By opening the board for editing in the admin panel: http://your-domain.com/wp-admin/post.php?post=4&action=edit - ?post=4 is what you seek.
+
+Q: How do I make a list of all the tasks for a specific user?
+A: You can use [usernotes userid='1'] for that. If you don't specify an user id, you'll get all tasks by all users.
 
 == Installation ==
 
