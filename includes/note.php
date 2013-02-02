@@ -134,10 +134,10 @@ class FlowBoard_Note{
         //Users dropdown instead of text field
         $users  = get_users(array('orderby' => 'display_name', 'order' => 'ASC'));
 
-        $list_items = '<option value="none">none</option>';
+        $list_items = '<option value="none">NONE</option>';
 
         foreach ($users as $cur_user) {
-            if ($this->author == $cur_user->display_name || $this->author == $cur_user->user_login) {
+            if (!(strcasecmp($this->author, $cur_user->display_name) || strcasecmp($this->author, $cur_user->user_login))) {
                 $list_items = $list_items.'<option selected value="' . $cur_user->user_login . '">' . $cur_user->display_name . '</option>';
             } else {
                 $list_items = $list_items.'<option value="' . $cur_user->user_login . '">' . $cur_user->display_name . '</option>';    
